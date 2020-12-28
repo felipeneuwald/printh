@@ -18,7 +18,7 @@ func ExampleDebug() {
 }
 
 func ExampleErr() {
-	err := fmt.Errorf("%v", "new error")
+	err := fmt.Errorf("new error")
 	printh.Err(err)
 	// Output: 2009/11/10 23:00:00 ERR   [main.main] (new error)
 }
