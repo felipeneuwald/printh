@@ -49,7 +49,6 @@ func ErrFatal(err error, m ...interface{}) {
 		n := runtime.Callers(2, pc)
 		frames := runtime.CallersFrames(pc[:n])
 		frame, _ := frames.Next()
-
 		log.Fatalf("ERR   [%v] (%v) %v", frame.Function, err, fmt.Sprint(m...))
 	}
 }
