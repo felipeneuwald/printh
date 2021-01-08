@@ -3,4 +3,8 @@
 # printh
 Package printh is a helper for printing standardized messages using the standard library log package.
 
-See [pkg.go.dev](https://pkg.go.dev/github.com/felipeneuwald/printh) for package documentation.
+## Installation
+`go get github.com/felipeneuwald/printh`
+
+## Usage
+See [pkg.go.dev](https://pkg.go.dev/github.com/felipeneuwald/printh) for usage examples and the full package documentation.
