@@ -2,23 +2,33 @@ package printh_test
 
 import (
 	"fmt"
+	"log"
+	"os"
 
 	"github.com/felipeneuwald/printh"
 )
 
 func ExampleInfo() {
-	printh.Info("info message")
-	// Output: 2009/11/10 23:00:00 INFO  [main.main] info message
+	printh.Info("Info message")
+}
+
+func ExampleInfo_stdout() {
+	log.SetOutput(os.Stdout)
+	printh.Info("Info message printed to os.Stdout")
 }
 
 func ExampleDebug() {
 	d := true
-	printh.Debug(d, "debug message")
-	// Output: 2009/11/10 23:00:00 DEBUG [main.main] debug message
+	printh.Debug(d, "Debug message")
 }
 
 func ExampleErr() {
-	err := fmt.Errorf("new error")
+	err := fmt.Errorf("New error")
 	printh.Err(err)
-	// Output: 2009/11/10 23:00:00 ERR   [main.main] (new error)
+}
+
+func ExampleErrFatal() {
+	err := fmt.Errorf("New fatal error")
+	printh.ErrFatal(err)
+	fmt.Println("This code will not run")
 }
